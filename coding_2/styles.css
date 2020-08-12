@@ -1,0 +1,45 @@
+.hero-image {
+    background-image: url("https://images.pexels.com/photos/4239730/pexels-photo-4239730.jpeg");
+    width: 100%;
+    height: 450px;
+    
+  }
+  
+  input{
+    width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 20px 200px 300px
+  }
+  .title{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,cantarell,helvetica neue,ubuntu,sans-serif;
+    padding-top: 100px;
+  }
+
+  .searchIcon{
+      width: 20px;
+      height: 25px;
+  }
+  #btn{
+      padding: 10px;
+      background-color: blue;
+      color: white;
+  }
+
+  .gridBox{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;;
+      
+  }
+
+  .imgBlock{
+   
+      width: 300px;
+      height: 300px;
+  }
