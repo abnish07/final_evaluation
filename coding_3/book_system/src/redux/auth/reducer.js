@@ -6,7 +6,8 @@ const initState={
     loginData: [],
     signupData: [],
     isLogin: false,
-    isSignup: false
+    isSignup: false,
+    isDashboard: false
 }
 
  const reducer=(state=initState, {type, payload})=>{
@@ -25,7 +26,8 @@ const initState={
                 ...state,
                 isLoading: false,
                 iLogin: true,
-                loginData: payload
+                loginData: payload,
+                isDashboard: true
             }
         )
         case FETCH_REGISTRATION_DATA:

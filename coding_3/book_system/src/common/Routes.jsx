@@ -5,6 +5,7 @@ import Login from '../components/Login';
 import Signup from '../components/Signup';
 import AddBooks from '../components/AddBooks';
 import AddCategory from '../components/AddCategory';
+import Dashboard from '../components/Dashboard';
 
 const Routes =(props)=>{
     return(
@@ -14,6 +15,7 @@ const Routes =(props)=>{
                 <Route exact path="/login" exact render={(props)=><Login {...props} /> } />
                 <Route exact path="/signup" exact render={(props)=><Signup {...props} /> } />
                 <Route exact path="/add-books" exact render={(props)=><AddBooks {...props} /> } />
+                <Route exact path="/dashboard" exact render={(props)=><Dashboard {...props} /> } />
                 <Route exact path="/add-category" exact render={(props)=><AddCategory {...props} /> } />
             <Switch />
         </>

@@ -7,15 +7,15 @@ class Category extends React.Component {
     }
     render() { 
         return ( 
-            <div class="card" style="width: 18rem;">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Art & Photography</li>
-              <li class="list-group-item">Fiction</li>
-              <li class="list-group-item">Motivation</li>
-              <li class="list-group-item">Education</li>
-              <li class="list-group-item">Biography</li>
-              <li class="list-group-item">Ancient</li>
-            </ul>
+            <div className="flex-box">
+            <select className="custom-select"> 
+              <option value="art_photography">Art & Photography</option>
+              <option value="fiction">Fiction</option>
+              <option value="motivation">Motivation</option>
+              <option value="education">Education</option>
+              <option value="biography">Biography</option>
+              <option value="ancient">Ancient</option>
+            </select>
           </div>
          );
     }

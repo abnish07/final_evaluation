@@ -34,6 +34,7 @@ export const userRegistration = (query) => (dispatch) => {
       .post("http://localhost:8080/auth/register", {
         email: query.email,
         name: query.name,
+        username: query.username,
         password: query.password,
         mobile: query.mobile,
         description: query.desc
@@ -51,7 +52,7 @@ export const userRegistration = (query) => (dispatch) => {
     dispatch(fetchLoginData());
     return axios
       .post("http://localhost:8080/auth/login", {
-        username: query.name,
+        username: query.email,
         password: query.password
       })
       .then((loginRes) => {
