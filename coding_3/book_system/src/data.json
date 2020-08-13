@@ -1,0 +1,127 @@
+
+{
+ "data": [ 
+    {
+        "id": "ISBN:0738531367",
+        "title": "An Anonymous Girl",
+        "category": "arts_&_photography",
+        "description": "book_1 description",
+        "url": "/images/an_anonymous_girl.jpg",
+        "Author": "Gree Rhendricks Sarah",
+        "price": 1001,
+        "quantity": 10
+    },
+    {
+        "id": "ISBN:0738531376",
+        "title": "The Secret of Nagas",
+        "category": "arts_&_photography",
+        "description": "The sinister Naga warrior has killed his friend Brahaspati and now stalks his wife Sati. Shiva, the Tibetan immigrant who is the prophesied destroyer of evil, will not rest till he finds his demonic adversary. His vengeance and the path to evil will lead him to the door of the Nagas, the serpent people. Of that he is certain.",
+        "url": "/images/the_secret_of_nagas.jpg",
+        "Author": "Amish Tripathi",
+        "price": 1001,
+        "quantity": 10
+    },
+    {
+        "id": "ISBN:0738531389",
+        "title": "Scion of Ikshvaku",
+        "category": "fiction",
+        "description": "3400 BCE. INDIA Ayodhya is weakened by divisions. A terrible war has taken its toll. The damage runs deep. The demon King of Lanka, Raavan, does not impose his rule on the defeated. He, instead, imposes his trade. Money is sucked out of the empire. The Sapt Sindhu people descend into poverty, despondency and corruption. They cry for a leader to lead them out of the morass. Little do they appreciate that the leader is among them.",
+        "url": "/images/scion_of_ikshvaku.jpg",
+        "Author": "Amish Tripathi",
+        "price": 1201,
+        "quantity": 8
+    },
+    {
+        "id": "ISBN:0738531390",
+        "title": "Objective General English",
+        "category": "education",
+        "description": "The general english section is asked in almost every competitive examination like NDA, CDS, SSC (CGL, MTS, LDC), Bank (PO & Clerk), Hotel Management, MBA, MCA, UPSC, Bed exams, etc. It is important to know the concepts of general English to clear any competitive examination as well as to communicate with ease in this fast modernizing world.",
+        "url": "/images/general_english.jpg",
+        "Author": "S.P. Bakshi",
+        "price": 171,
+        "quantity": 8
+    },
+    {
+        "id": "ISBN:0738531395",
+        "title": "Sold on Monday",
+        "category": "fiction",
+        "description": "The sign is a last resort. It sits on a farmhouse porch in 1931, but could be found anywhere in an era of breadlines, bank runs and broken dreams. It could have been written by any mother facing impossible choices.",
+        "url": "/images/sold_on_monday.jpg",
+        "Author": "kristina McMoris",
+        "price": 971,
+        "quantity": 5
+    },
+    {
+        "id": "ISBN:0738531315",
+        "title": "Judgement",
+        "category": "Biography",
+        "description": "It was nothing more than a one-night stand. Juliana Brody, a judge in the Superior Court of Massachusetts, is rumored to be in consideration for the federal circuit, maybe someday the highest court in the land. At a conference in a Chicago hotel,",
+        "url": "/images/joseph_finder.jpg",
+        "Author": "Joseph Finder",
+        "price": 1471,
+        "quantity": 5
+    },
+    {
+        "id": "ISBN:0738531325",
+        "title": "The Immortal of Meluha",
+        "category": "fiction",
+        "description": "1900 BC. In what modern Indians mistakenly call the Indus Valley Civilisation. The inhabitants of that period called it the land of Meluha - a near perfect empire created many centuries earlier by Lord Ram, one of the greatest monarchs that ever lived. ",
+        "url": "/images/meluha.jpg",
+        "Author": "Amish Tripathi",
+        "price": 971,
+        "quantity": 5
+    },
+    {
+        "id": "ISBN:0738531335",
+        "title": "Reflection of man",
+        "category": "motivational",
+        "description": "1900 BC. In what modern Indians mistakenly call the Indus Valley Civilisation. The inhabitants of that period called it the land of Meluha - a near perfect empire created many centuries earlier by Lord Ram, one of the greatest monarchs that ever lived. ",
+        "url": "/images/reflection_of_man.jpg",
+        "Author": "Amari Soul",
+        "price": 571,
+        "quantity": 6
+    },
+    {
+        "id": "ISBN:0738531345",
+        "title": "Sapiens",
+        "category": "ancient",
+        "description": "1900 BC. In what modern Indians mistakenly call the Indus Valley Civilisation. The inhabitants of that period called it the land of Meluha - a near perfect empire created many centuries earlier by Lord Ram, one of the greatest monarchs that ever lived. ",
+        "url": "/images/sapiens.jpg",
+        "Author": "Yuval Noah Harari",
+        "price": 571,
+        "quantity": 2
+    },
+    {
+        "id": "ISBN:0738531345",
+        "title": "The First Conspiracy",
+        "category": "spy",
+        "description": "In 1776, an elite group of soldiers were handpicked to serve as George Washington's bodyguards. Washington trusted them; relied on them. But unbeknownst to Washington, some of them were part of a treasonous plan. In the months leading up to the Revolutionary War, these traitorous soldiers, along with the Governor of New York.",
+        "url": "/images/the_first_conspiracy.jpg",
+        "Author": "Brad Meltzer",
+        "price": 1871,
+        "quantity": 2
+    },
+    {
+        "id": "ISBN:0738531445",
+        "title": "Crucible",
+        "category": "fiction",
+        "description": "Arriving home on Christmas Eve, Commander Gray Pierce discovers his house ransacked, his pregnant lover missing, and his best friend's wife, Kat, unconscious on the kitchen floor. With no shred of evidence to follow, his one hope to find the woman he loves and his unborn child is Kat, the only witness to what happened. ",
+        "url": "/images/crucible.jpg",
+        "Author": "james Rollings",
+        "price": 1571,
+        "quantity": 2
+    },
+    {
+        "id": "ISBN:0738531545",
+        "title": "Think Grow and Rich",
+        "category": "motivation",
+        "description": "Arriving home on Christmas Eve, Commander Gray Pierce discovers his house ransacked, his pregnant lover missing, and his best friend's wife, Kat, unconscious on the kitchen floor. With no shred of evidence to follow, his one hope to find the woman he loves and his unborn child is Kat, the only witness to what happened. ",
+        "url": "/images/think_grow_and_rich.jpg",
+        "Author": "Napolean Hill",
+        "price": 171,
+        "quantity": 20
+    }
+
+
+ ]
+}
