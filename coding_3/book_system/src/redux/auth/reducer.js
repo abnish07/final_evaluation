@@ -2,13 +2,15 @@ import React from 'react';
 import { FETCH_LOGIN_DATA, LOGIN_SUCCESS, LOGIN_FAIL,FETCH_REGISTRATION_DATA, REGISTRATION_SUCCESS, REGISTRATION_FAILURE } from '../auth/actionType';
 import { fetchLoginData } from '../auth/action';
 
-const initState={
+const initState=({
     loginData: [],
     signupData: [],
     isLogin: false,
     isSignup: false,
-    isDashboard: false
-}
+    isDashboard: false,
+    userLoginData: [],
+    token: []
+})
 
  const reducer=(state=initState, {type, payload})=>{
     console.log("payload", payload)
@@ -25,9 +27,10 @@ const initState={
             {
                 ...state,
                 isLoading: false,
-                iLogin: true,
+                isLogin: true,
                 loginData: payload,
-                isDashboard: true
+                isDashboard: true,
+                userLoginData: [ ...state.userLoginData, payload["config"].data ]
             }
         )
         case FETCH_REGISTRATION_DATA:

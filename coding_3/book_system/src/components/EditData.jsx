@@ -2,10 +2,10 @@ import React from "react";
 import './Home.css'
 import { connect } from "react-redux";
 import Category from "./Category";
-import { addUserBook } from "../redux/action";
+import { addUserBook, handleUpdate } from "../redux/action";
 import { v4 as uuidv4 } from 'uuid';
 
-class AddBooks extends React.Component {
+class EditData extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,9 +15,14 @@ class AddBooks extends React.Component {
         quantity:'',
         categoryName: 'Fiction',
         desc: '',
-        // id: uuidv4()
     };
   }
+
+//   componentDidMount(){
+//     //   let {id} = this.props.match.params
+//     //   let item = this.props.userBookData.find(item=>item.id === id)
+//       console.log("item", this.props.userBookData)
+//   }
 
   handleChange=(e)=>{
       this.setState({
@@ -25,10 +30,17 @@ class AddBooks extends React.Component {
       })
   }
 
+  handleCancel=()=>{
+     this.props.history.push('/dashboard/add-books')
+  }
+
   render() {
-      const { categoryData, addUserBook } = this.props;
-      const { handleChange } = this
+      const { userBookData, addUserBook, handleUpdate } = this.props;
+      let {id} = this.props.match.params
+      const { handleChange, handleCancel } = this
       const { bookname, author, price, categoryName, desc, quantity } = this.state;
+    //   userBookData.find(item.id ===id)
+      console.log("props edit page", userBookData)
     return (
       <>
         {/* <form className="form"> */}
@@ -64,7 +76,7 @@ class AddBooks extends React.Component {
             <div className="form-group col-md-4">
               <label htmlFor="inputState">Category</label>
               <select id="inputState" className="form-control" onChange={handleChange} value={categoryName} name="categoryName" >
-                  {categoryData && categoryData.map(category=>(
+                  {userBookData && userBookData.map(category=>(
                       <option value={category} key={category} >{category}</option>
 
                   ))}
@@ -80,10 +92,11 @@ class AddBooks extends React.Component {
             />
           </div>
           </div>
-          <div className="text-center mb-1">
-          <button type="submit" onClick={()=>addUserBook({...this.state , id:uuidv4()})} className="btn btn-primary">
-            Add Books
-          </button></div>
+          <div className="text-center mb-3">
+           <button className="btn btn-success mr-3" onClick={()=> handleUpdate(this.state)} >Update data</button>
+           
+              <button className="btn btn-danger" onClick={handleCancel} >Cancel</button>
+              </div>
         {/* </form> */}
       </>
     );
@@ -91,11 +104,11 @@ class AddBooks extends React.Component {
 }
 
 const mapSatateToProps=(state)=>({
-    categoryData: state.dataReducer.categoryData,
+    userBookData: state.dataReducer.userBookData,
 })
 
 const mapDispatchToProps=(dispatch)=>({
-    addUserBook: (query)=>dispatch(addUserBook(query))
+    handleUpdate: (query)=>dispatch(handleUpdate(query))
 })
 
-export default connect(mapSatateToProps, mapDispatchToProps)(AddBooks);
+export default connect(mapSatateToProps, mapDispatchToProps)(EditData);

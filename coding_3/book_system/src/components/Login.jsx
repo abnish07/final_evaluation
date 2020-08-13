@@ -23,7 +23,7 @@ class Login extends React.Component {
         const { handleChange } = this;
         const { email, password } = this.state;
         const { userLogin, isLogin } = this.props;
-        console.log( "isLogin", isLogin)
+        // console.log( "isLogin", isLogin)
         if(isLogin){
             return <Redirect to="/dashboard" />
         }

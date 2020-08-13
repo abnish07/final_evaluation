@@ -1,1 +1,4 @@
 export const ADD_CATEGORY = "ADD_CATEGORY";
+export const ADD_USER_BOOK = "ADD_USER_BOOK";
+export const HANDLE_DELETE = "HANDLE_DELETE";
+export const HANDLE_UPDATE = "HANDLE_UPDATE";
