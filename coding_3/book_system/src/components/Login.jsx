@@ -25,7 +25,7 @@ class Login extends React.Component {
         const { userLogin, isLogin } = this.props;
         // console.log( "isLogin", isLogin)
         if(isLogin){
-            return <Redirect to="/dashboard" />
+            return <Redirect to="/dashboard/add-books" />
         }
         return ( 
             <div>

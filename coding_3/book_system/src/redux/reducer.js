@@ -5,26 +5,29 @@ import data from '../data.json';
 const initState=({
     categoryData: [ "Fiction","Art & Photography", "Motivation", "Education", "Biography", "Ancient" ],
     bookData: data,
-    userBookData: []
+    userBookData: [],
+    selectFilterValue: "",
+    isUpdate: false,
 })
 
  const reducer=(state=initState, {type, payload})=>{
     console.log("payload ", payload)
     switch(type){
         case ADD_CATEGORY:
+            alert("category added successfully")
         return(
             {
                 ...state,
-                isLoading: true,
-                categoryData: [ ...state.categoryData, payload ]
+                categoryData: [ ...state.categoryData, payload ],
+                isUpdate: false
             }
         )
         case ADD_USER_BOOK:
         return(
             {
                 ...state,
-                isLoading: true,
-                userBookData: [ ...state.userBookData, payload ]
+                userBookData: [ ...state.userBookData, payload ],
+                isUpdate: false
             }
         )
        
@@ -34,19 +37,29 @@ const initState=({
         return(
             {
                 ...state,
-                isLoading: true,
-                userBookData: updatedData
+                userBookData: updatedData,
+                isUpdate: false
             }
         )
         case HANDLE_UPDATE:
+            const { userBookData } = state 
             let currentData = [...state.userBookData]
-            let item = currentData.find(item=>item.id === payload.id)
-
+            let updatedItem = currentData.filter(item=>item.id === payload.id?
+                (
+                item.bookname= payload.bookname,
+                item.author= payload.author,
+                item.price= payload.price,
+                item.quantity= payload.quantity,
+                item.categoryName= payload.categoryName,
+                item.desc= payload.desc,
+                item.id= payload.id
+            ):true)
+                
         return(
             {
                 ...state,
-                isLoading: true,
-                userBookData: [...state.userBookData, item]
+                userBookData: updatedItem,
+                isUpdate: !state.isUpdate
             }
         )
        

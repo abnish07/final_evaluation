@@ -4,7 +4,7 @@ import AddBooks from './AddBooks';
 import { v4 as uuidv4 } from 'uuid';
 import { handleDelete } from '../redux/action';
 import { Link, Redirect } from 'react-router-dom';
-import Filter from './Filter';
+// import Filter from './Filter';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -29,7 +29,8 @@ class Dashboard extends React.Component {
               <th scope="col">Author</th>
               <th scope="col">Edit</th>
               <th scope="col">Delete</th>
-              <tr><Filter />
+              <tr>
+                {/* <Filter /> */}
               <th scope="col"></th></tr>
             </tr>
           </thead>

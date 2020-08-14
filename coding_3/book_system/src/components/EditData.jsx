@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Category from "./Category";
 import { addUserBook, handleUpdate } from "../redux/action";
 import { v4 as uuidv4 } from 'uuid';
+import { Redirect } from "react-router-dom";
 
 class EditData extends React.Component {
   constructor(props) {
@@ -15,14 +16,26 @@ class EditData extends React.Component {
         quantity:'',
         categoryName: 'Fiction',
         desc: '',
+        id: '',
     };
   }
 
-//   componentDidMount(){
-//     //   let {id} = this.props.match.params
-//     //   let item = this.props.userBookData.find(item=>item.id === id)
-//       console.log("item", this.props.userBookData)
-//   }
+  componentDidMount(){
+      let {id} = this.props.match.params
+      let { userBookData } = this.props
+      let item =  userBookData && userBookData.find(item=>item.id === id)
+      this.setState({
+        bookname: item && item.bookname,
+        author: item && item.author,
+        price: item && item.price,
+        quantity: item && item.quantity,
+        categoryName: item && item.categoryName,
+        desc: item && item.desc,
+        id: item && item.id,
+      })
+
+      console.log("item", this.props.userBookData)
+  }
 
   handleChange=(e)=>{
       this.setState({
@@ -31,16 +44,19 @@ class EditData extends React.Component {
   }
 
   handleCancel=()=>{
-     this.props.history.push('/dashboard/add-books')
+     this.props.history.push('/')
   }
 
   render() {
-      const { userBookData, addUserBook, handleUpdate } = this.props;
+      const { userBookData,categoryData,isUpdate, addUserBook, handleUpdate } = this.props;
       let {id} = this.props.match.params
       const { handleChange, handleCancel } = this
       const { bookname, author, price, categoryName, desc, quantity } = this.state;
     //   userBookData.find(item.id ===id)
-      console.log("props edit page", userBookData)
+      console.log("isupdate", isUpdate)
+      if(isUpdate){
+       return  <Redirect to="/" />
+      }
     return (
       <>
         {/* <form className="form"> */}
@@ -76,7 +92,7 @@ class EditData extends React.Component {
             <div className="form-group col-md-4">
               <label htmlFor="inputState">Category</label>
               <select id="inputState" className="form-control" onChange={handleChange} value={categoryName} name="categoryName" >
-                  {userBookData && userBookData.map(category=>(
+                  {categoryData && categoryData.map(category=>(
                       <option value={category} key={category} >{category}</option>
 
                   ))}
@@ -104,7 +120,9 @@ class EditData extends React.Component {
 }
 
 const mapSatateToProps=(state)=>({
+    categoryData: state.dataReducer.categoryData,
     userBookData: state.dataReducer.userBookData,
+    isUpdate: state.dataReducer.isUpdate
 })
 
 const mapDispatchToProps=(dispatch)=>({

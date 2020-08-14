@@ -22,3 +22,12 @@ img{
 .form{
     margin: 20px 20px 20px 100px;
 }
+
+/* .add-book{
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    z-index: 2; */
+    /* offset-position: center; */
+/* } */

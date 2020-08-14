@@ -32,6 +32,7 @@ class AddBooks extends React.Component {
     return (
       <>
         {/* <form className="form"> */}
+        <div className="add-book">
         <div className="row px-5 pt-5">
             <div className="form-group col-md-4">
               <label htmlFor ="book-name">Book Name</label>
@@ -84,6 +85,7 @@ class AddBooks extends React.Component {
           <button type="submit" onClick={()=>addUserBook({...this.state , id:uuidv4()})} className="btn btn-primary">
             Add Books
           </button></div>
+          </div>
         {/* </form> */}
       </>
     );
